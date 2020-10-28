@@ -1,0 +1,6 @@
+pytest
+flask
+flask_sqlalchemy
+flask_expects_json 
+sqlalchemy_utils
+mysqlclient
