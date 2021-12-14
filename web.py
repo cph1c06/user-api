@@ -46,6 +46,10 @@ def to_json(inst, cls):
             d[c.name] = v
     return json.dumps(d)
 
+os.environ['MYSQL_USER'] = 'root'
+os.environ['MYSQL_PASSWD'] = 'mypass'
+#os.environ['MYSQL_HOST'] = 'mariadbtest'
+os.environ['MYSQL_HOST'] = '127.0.0.1'
 
 app = Flask(__name__)
 url = 'mysql://{0}:{1}@{2}:{3}/{4}'.format(os.environ['MYSQL_USER'], os.environ['MYSQL_PASSWD'], os.environ['MYSQL_HOST'], '3306', 'User')
